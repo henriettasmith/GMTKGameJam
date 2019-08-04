@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Spaces.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/GameGrid.cs" type="Script" id=2]
+[ext_resource path="res://Sprites/Castle.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Knight.png" type="Texture" id=4]
+[ext_resource path="res://Font.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Curve" id=1]
+max_value = 14.0
+_data = [ Vector2( 0, 14 ), 0.0, 0.0, 0, 0, Vector2( 1, 14 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Main" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 0, 0, 3, 1, 0, 4, 0, 0, 5, 1, 0, 6, 0, 0, 7, 1, 0, 8, 0, 0, 9, 1, 0, 10, 0, 0, 11, 1, 0, 65536, 1, 0, 65537, 0, 0, 65538, 1, 0, 65539, 0, 0, 65540, 1, 0, 65541, 0, 0, 65542, 1, 0, 65543, 0, 0, 65544, 1, 0, 65545, 0, 0, 65546, 1, 0, 65547, 0, 0, 131072, 0, 0, 131073, 1, 0, 131074, 0, 0, 131075, 1, 0, 131076, 0, 0, 131077, 1, 0, 131078, 0, 0, 131079, 1, 0, 131080, 0, 0, 131081, 1, 0, 131082, 0, 0, 131083, 1, 0, 196608, 1, 0, 196609, 0, 0, 196610, 1, 0, 196611, 0, 0, 196612, 1, 0, 196613, 0, 0, 196614, 1, 0, 196615, 0, 0, 196616, 1, 0, 196617, 0, 0, 196618, 1, 0, 196619, 0, 0, 262144, 0, 0, 262145, 1, 0, 262146, 0, 0, 262147, 1, 0, 262148, 0, 0, 262149, 1, 0, 262150, 0, 0, 262151, 1, 0, 262152, 0, 0, 262153, 1, 0, 262154, 0, 0, 262155, 1, 0, 327680, 1, 0, 327681, 0, 0, 327682, 1, 0, 327683, 0, 0, 327684, 1, 0, 327685, 0, 0, 327686, 1, 0, 327687, 0, 0, 327688, 1, 0, 327689, 0, 0, 327690, 1, 0, 327691, 0, 0, 393216, 0, 0, 393217, 1, 0, 393218, 0, 0, 393219, 1, 0, 393220, 0, 0, 393221, 1, 0, 393222, 0, 0, 393223, 1, 0, 393224, 0, 0, 393225, 1, 0, 393226, 0, 0, 393227, 1, 0, 458752, 1, 0, 458753, 0, 0, 458754, 1, 0, 458755, 0, 0, 458756, 1, 0, 458757, 0, 0, 458758, 1, 0, 458759, 0, 0, 458760, 1, 0, 458761, 0, 0, 458762, 1, 0, 458763, 0, 0, 524288, 0, 0, 524289, 1, 0, 524290, 0, 0, 524291, 1, 0, 524292, 0, 0, 524293, 1, 0, 524294, 0, 0, 524295, 1, 0, 524296, 0, 0, 524297, 1, 0, 524298, 0, 0, 524299, 1, 0, 589824, 1, 0, 589825, 0, 0, 589826, 1, 0, 589827, 0, 0, 589828, 1, 0, 589829, 0, 0, 589830, 1, 0, 589831, 0, 0, 589832, 1, 0, 589833, 0, 0, 589834, 1, 0, 589835, 0, 0 )
+script = ExtResource( 2 )
+Width = 11
+Height = 9
+progressCurve = SubResource( 1 )
+
+[node name="PlayerHighlights" type="TileMap" parent="TileMap"]
+modulate = Color( 1, 1, 1, 0.482353 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+format = 1
+
+[node name="EnemyHighlights" type="TileMap" parent="TileMap"]
+modulate = Color( 1, 1, 1, 0.690196 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+format = 1
+
+[node name="Castle" type="Sprite" parent="."]
+position = Vector2( -79.6625, 332.026 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="BlackKnight" type="Node2D" parent="."]
+position = Vector2( 105.97, 385.389 )
+
+[node name="Sprite" type="Sprite" parent="BlackKnight"]
+position = Vector2( -5.3, 0 )
+texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -171.21, -61.84 )
+anchor_mode = 0
+current = true
+
+[node name="InstructionText" type="Label" parent="."]
+margin_left = 6.26004
+margin_top = -54.0581
+margin_right = 752.26
+margin_bottom = 0.941914
+custom_fonts/font = ExtResource( 5 )
+text = "Do not let pawns reach the wall. Do not get captured.
+Red pieces move when you do. Purple pieces move every second."
+
+[node name="ClickPanel" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 0.74902 )
+margin_left = 304.496
+margin_top = 242.479
+margin_right = 600.0
+margin_bottom = 319.479
+
+[node name="Label2" type="Label" parent="ClickPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.5
+margin_top = -32.5
+margin_right = 133.5
+margin_bottom = 32.5
+custom_fonts/font = ExtResource( 5 )
+text = "Click anywhere
+To Begin"
+align = 1
+
+[node name="ScoreText" type="Label" parent="."]
+margin_left = 717.683
+margin_top = -57.5065
+margin_right = 819.683
+margin_bottom = -26.5065
+custom_fonts/font = ExtResource( 5 )
+text = "000000"
+align = 2
+
+[node name="ScoreText2" type="Label" parent="."]
+margin_left = 625.943
+margin_top = -58.3639
+margin_right = 727.943
+margin_bottom = -27.3639
+custom_fonts/font = ExtResource( 5 )
+text = "Score:"
+align = 2

@@ -1,0 +1,155 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/Bishop.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bishop.cs" type="Script" id=2]
+[ext_resource path="res://Sprites/Timer.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Knight.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Knight.cs" type="Script" id=5]
+[ext_resource path="res://Sprites/King.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/King.cs" type="Script" id=7]
+[ext_resource path="res://Sprites/Pawn.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Pawn.cs" type="Script" id=9]
+[ext_resource path="res://Sprites/Queen.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Queen.cs" type="Script" id=11]
+[ext_resource path="res://Sprites/Rook.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Rook.cs" type="Script" id=13]
+
+[node name="Node" type="Node"]
+
+[node name="Bishop2" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 1, 0.392157 )
+position = Vector2( 120.569, 443.483 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Bishop2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+radial_center_offset = Vector2( 19.28, -21.51 )
+
+[node name="Knight2" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 1, 0.392157 )
+position = Vector2( 273.736, 478.857 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Knight2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+radial_center_offset = Vector2( 19.28, -21.51 )
+
+[node name="King2" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 1, 0.392157 )
+position = Vector2( 341.281, 483.72 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="TextureProgress" type="TextureProgress" parent="King2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+radial_center_offset = Vector2( 19.28, -21.51 )
+
+[node name="Pawn2" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 1, 0.392157 )
+position = Vector2( 554.184, 470.211 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Pawn2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+radial_center_offset = Vector2( 19.28, -21.51 )
+
+[node name="Queen2" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 1, 0.392157 )
+position = Vector2( 674.144, 479.397 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Queen2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+radial_center_offset = Vector2( 19.28, -21.51 )
+
+[node name="Rook2" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 1, 0.392157 )
+position = Vector2( 797.887, 513.98 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Rook2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+radial_center_offset = Vector2( 19.28, -21.51 )
+
+[node name="Bishop" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 0.156863, 0.392157 )
+position = Vector2( 127.298, 306.481 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Knight" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 0.156863, 0.392157 )
+position = Vector2( 271.575, 330.257 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="King" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 0.156863, 0.392157 )
+position = Vector2( 339.12, 335.12 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="Pawn" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 0.156863, 0.392157 )
+position = Vector2( 552.023, 321.611 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="Queen" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 0.156863, 0.392157 )
+position = Vector2( 671.983, 330.797 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+
+[node name="Rook" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.156863, 0.156863, 0.392157 )
+position = Vector2( 795.726, 365.38 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
